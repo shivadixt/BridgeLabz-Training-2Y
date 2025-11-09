@@ -1,0 +1,15 @@
+import java.util.function.Predicate;
+
+public class TemperatureAlert {
+    public static void main(String[] args) {
+        Predicate<Double> highTemp = temp -> temp > 40.0;
+
+        double currentTemp = 42.5;
+        if (highTemp.test(currentTemp)) {
+            System.out.println("ALERT: High Temperature!");
+        } else {
+            System.out.println("Temperature Normal.");
+        }
+    }
+}
+

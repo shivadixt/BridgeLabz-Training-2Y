@@ -1,0 +1,13 @@
+interface SecurityUtils {
+    static boolean isStrongPassword(String password) {
+        return password.length() >= 8 && password.matches(".*[A-Z].*") && password.matches(".*\\d.*");
+    }
+}
+
+public class PasswordCheck {
+    public static void main(String[] args) {
+        String pwd = "Admin123";
+        System.out.println("Is strong password? " + SecurityUtils.isStrongPassword(pwd));
+    }
+}
+
